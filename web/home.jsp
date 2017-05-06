@@ -61,8 +61,8 @@
 								<li><a href="#">Em aberto</a></li>
 								<li><a href="#">Respondidas</a></li>
 								<li><a href="#">Mais acessadas</a></li>
-								<li><a href="#">Mais recentes</a></li>
 								<li><a href="#">Todas</a></li>
+                                                                <li><a href="#">Minhas Respostas</a></li>
 							</ul>
 						</li>
 						<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -125,7 +125,7 @@
 						Questões Recentes
 					</div>
 					<div id="listaQuestoesRecentes" class="list-group col-sm-12">
-						<a href="consulta.html"  class="list-group-item row text-left">
+						<a href="consultaPergunta.jsp"  class="list-group-item row text-left">
 							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Matheus Levi</div>
 							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 03/05/2016</div>
 							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 2</div>

@@ -4,8 +4,10 @@
     Author     : Matheus Levi
 --%>
 
+<%@page import="model.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page session="true" %>
+<% Usuario usr = (Usuario) session.getAttribute("usuario"); %>
 <!DOCTYPE html>
 <html>
     	<head>
@@ -58,14 +60,14 @@
 								<li><a href="#">Minhas Perguntas</a></li>
 								<li><a href="#">Em aberto</a></li>
 								<li><a href="#">Respondidas</a></li>
-								<li><a href="#">Mais acessadas</a></li>
 								<li><a href="#">Mais recentes</a></li>
 								<li><a href="#">Todas</a></li>
+                                                                <li><a href="#">Minhas Respostas</a></li>
 							</ul>
 						</li>
 						<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
 						<li class="dropdown">
-                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bem Vindo <b> <% out.print(session.getAttribute("login"));  %></b>
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Bem Vindo <b> <% out.print(usr.getLogin());  %></b>
                                                 <span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                    <li><a href="alterarCadastro.jsp">Alterar dados da conta</a></li>

@@ -60,9 +60,9 @@
 					<li><a href="#">Minhas Perguntas</a></li>
 					<li><a href="#">Em aberto</a></li>
 					<li><a href="#">Respondidas</a></li>
-					<li><a href="#">Mais acessadas</a></li>
 					<li><a href="#">Mais recentes</a></li>
 					<li><a href="#">Todas</a></li>
+                                        <li><a href="#">Minhas Respostas</a></li>
                                     </ul>
 				</li>
 				<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
