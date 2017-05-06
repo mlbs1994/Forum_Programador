@@ -1,0 +1,226 @@
+#formContainer
+{
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+#formAlterarCadastro
+{
+    background-color: #fff;
+    width: 800px;
+    height: 450px;
+    padding: 25px;
+}
+
+
+#formTitle
+{
+    background-color: #3F659A;
+    border-bottom: none;
+    color: white;
+    width: 800px;
+}
+
+#formTitle h3
+{
+    margin: 0px;
+}
+
+.btn
+{
+    width: 100%;
+    margin: auto;
+}
+
+#botaoCadastrar 
+{
+    background-color: #3F659A;
+    color: #FFFFFF;
+    border: none;
+
+}
+
+#botaoExcluirConta
+{
+    background-color: #F00;
+    color: #FFFFFF;
+    border: none;
+
+}
+
+.btn
+{
+    color: #fff;
+}
+
+.btn:hover
+{
+    color: #fff;
+}
+
+#botaoCadastrar:hover
+{
+    background-color: #27518C;
+}
+
+.centralizar
+{
+margin: auto;
+float: none;
+}
+
+navbar
+{
+    background-color: #3F659A;
+}
+
+.icon-bar-estilo
+{
+    background-color: #fff !important;
+}
+
+button[class="navbar-toggle"]:hover, button[class="navbar-toggle"]:active
+{
+    background-color: #90ACD2 !important;
+}
+ 
+.footer, .push 
+{
+    clear: both;
+    color: #fff;
+}
+
+.footer
+{
+    background-color: #3F659A;
+} 
+
+* 
+{
+    margin: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+.wrapper
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.footer, .push
+{
+    height: 5em;
+}
+
+
+#logo
+{
+    position: absolute;
+    margin-top:5px;
+    height: 50%;
+    width: 400px;
+}
+
+#myFpBar
+{
+    padding-top: 15px;
+}
+
+body
+{
+    background-color: #ddf;
+}
+  
+.navbar
+{
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #3F659A;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;  
+}
+  
+ .navbar-nav li a
+ {
+    color: #fff !important;
+ }
+ 
+ .navbar-nav li.active a
+ {
+    color: #fff !important;
+    background-color: #000; !important;
+ }
+ 
+.navbar-default .navbar-toggle
+{
+    border-color: transparent;
+}
+
+.open .dropdown-toggle
+{
+    color: #fff;
+    background-color: #90ACD2 !important;
+}  
+  
+.dropdown-menu
+{
+    background-color: #90ACD2;
+}
+  
+.dropdown-menu li a
+{
+    color: #fff !important;
+}
+
+.dropdown-menu li a:hover
+{
+    background-color: #27518C; !important;
+}
+
+.kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover
+  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+  }
+  
+  .kv-avatar .file-input
+  {
+    display: table-cell;
+    max-width: 220px;
+  }
+  
+  #imgAvatar img
+{
+    width: 150px;
+    height: 150px;
+    margin-left: 300px;
+    margin-bottom: 15px;
+}
+
+#imgLabel 
+{
+    margin-left: 315px;
+}
+
+.textoForm
+{
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+
+
+
+  
+  

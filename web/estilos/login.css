@@ -1,0 +1,264 @@
+.container
+{
+padding-left: 0;
+padding-right: 0;
+float: none;
+}
+
+#entrar
+{
+background-color: #3F659A;
+}
+
+#entrar:hover
+{
+background-color: #27518C;
+}
+    
+label
+{
+font-size: 8pt;
+}
+    
+.row
+ {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+}
+    
+    
+#meuFormulario 
+{
+    float: none;
+    padding: 0;
+    height: 620px;
+    margin-bottom: none;
+}
+    
+#formAluno
+{
+    background-color: #FFFFFF; 
+}
+   
+#formTitle
+{
+    background-color: #3F659A;
+    border-bottom: none;
+    color: white;
+    height: 40px;
+    padding-top: 8px;
+    overflow:auto;
+}
+.formInput
+{
+    padding-left: 0;
+    padding-right: 0;    
+}
+    
+.centralizar
+ {
+    margin: auto;
+    float: none;
+ }
+    
+div[class="col-sm-12"] .botao
+{
+    margin-top: 40px;
+}
+    
+.btn
+{
+    width: 100%;
+    margin: auto;
+}
+    
+#formTitle h3
+{
+    margin: 0; 
+}
+
+.btnSocialTxt
+{
+font-size: 8pt;
+}
+    
+@media(max-width: 768px) 
+{
+    body
+        {
+        background-color: #3F659A;
+    }
+
+    #formTitle
+        {
+        background-color: #163B6F;
+        border: 0;
+        width: 70%;
+    }
+
+    #meuFormulario 
+        {
+        margin-top: 50px;
+        margin-bottom: 55px;
+    }
+        
+    #formAluno
+        {
+        height: 55%;
+        width: 70%;
+    }
+
+
+    #loginHeader img
+        {
+        margin-top: 20px;
+        width: 80%;
+        height: 20%;
+    }
+
+    .btn
+        {
+        color: #FFFFFF;
+        border: none;
+    }
+
+    #loginHeader div
+        {
+        width: 80%;
+        margin: auto;
+    }
+
+    #loginHeader div h4
+        {
+        color: #FFF;
+        font-size: 13pt;
+    }
+
+    #textRight
+        {
+        position: absolute;
+        top: 80%;
+        left: 58%;
+        padding-right: 15px;
+        font-size: 10pt;
+        padding-bottom: 0px;
+        font-size: 10pt;
+    }
+
+    #textLeft
+        {
+        position: absolute;
+        top: 80%;
+        left: 8%;
+        padding-right: 15px;
+        font-size: 10pt;
+        padding-bottom: 15px;
+    }
+
+    #txtEsqueciSenha .col-sm-6
+        {
+        display: inline;
+    }
+
+    #botoesSocial
+       {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+   
+}
+    
+@media(min-width: 768px) 
+{
+        
+    body
+        {
+      background-image: url("../imagens/TI.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow:hidden;
+    }
+
+        
+    #meuFormulario 
+        {
+      margin-top: 60px;
+    }
+        
+    #formAluno
+        {
+      height: 55%;
+      opacity: 0.95;
+      box-shadow: 5px 15px 60px black;
+    }
+
+    #loginHeader
+        {
+        margin-bottom: 0px;
+    }
+
+    #loginHeader img
+        {
+        margin-top: 50px;
+    }
+
+    #loginHeader div h4
+        {
+        font-family: Impact;
+        color: #FFFFFF;
+        font-size: 20pt;
+    }
+
+    .btn 
+        {
+        color: #FFFFFF;
+        border: none;
+    }
+
+
+    .btn:hover
+        {
+        background-color: #27518C;
+        color: #FFFFFF;
+    }
+
+    #textRight
+        {
+        position: absolute;
+        top: 86%;
+        left: 65%;
+        padding-right: 15px;
+        font-size: 10pt;
+        padding-bottom: 15px;
+    }
+
+    #textLeft
+        {
+        position: absolute;
+        top: 86%;
+        left: 6%;
+        padding-right: 15px;
+        font-size: 10pt;
+        padding-bottom: 15px;
+    }
+
+
+    .inputPadding
+        {
+        padding: 0 15px 0 15px;
+    }
+
+    #botoesSocial
+        {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #botoesSocial a.btn
+        {
+        padding-left: 0;
+        padding-right: 0;
+    }
+        
+}

@@ -1,0 +1,240 @@
+.container
+{
+padding-left: 0;
+padding-right: 0;
+float: none;
+}
+
+label
+{
+font-size: 8pt;
+}
+
+.row
+{
+margin-left: 0;
+margin-right: 0;
+}
+
+#imgAvatar img
+{
+    width: 150px;
+    height: 150px;
+    margin-left: 168px;
+    margin-bottom: 15px;
+}
+
+#imgLabel 
+{
+    margin-left: 190px;
+}
+
+#meuFormulario 
+{
+float: none;
+padding: 0;
+height: 960px;
+margin-bottom: none;
+}
+
+#formAluno
+{
+background-color: #FFFFFF;
+}
+
+#formTitle
+{
+background-color: #3F659A;
+border-bottom: none;
+color: white;
+}
+
+
+.formInput
+{
+padding-left: 0;
+padding-right: 0;
+
+}
+
+.centralizar
+{
+margin: auto;
+float: none;
+}
+
+div[class="col-sm-12"] .botao
+{
+margin-top: 40px;
+}
+
+.btn
+{
+width: 100%;
+margin: auto;
+}
+
+#formTitle h3
+{
+margin: 0; 
+}
+
+#botaoCadastrar 
+{
+background-color: #3F659A;
+color: #FFFFFF;
+border: none;
+
+}
+
+@media(max-width: 768px) 
+{
+    #meuFormulario 
+        {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    }
+
+    #formAluno
+        {
+    height: 100%;
+    }
+
+    #cadastroHeader img
+        {
+    margin-top: 20px;
+    width: 80%;
+    height: 20%;
+    }
+
+    body
+        {
+    background-color: #3F659A;
+    }
+
+    #formTitle
+        {
+    background-color: #163B6F;
+    }
+
+    #textoForm
+        {
+    padding-top: 15px;
+    font-weight: bold;
+    }
+
+    #botoesSocial
+        {
+    padding-left: 0;
+    padding-right: 0;
+    }
+
+
+    #botoesSocial .col-sm-6
+        {
+    padding-left:0;
+    padding-right: 0 ;
+    margin: 0;
+    width: 50%;
+    }
+
+    #botoesSocial .col-xs-6
+        {
+    padding-left: 15px;
+    padding-right: 15px ;
+    margin: 0;
+    width: 50%;
+    }
+
+    btn.btn-block.btn-social.btn-facebook
+        {
+    padding-left: 15px;
+    }
+
+    btn.btn-block.btn-social.btn-google
+        {
+    padding-right: 15px;
+    }
+
+}
+
+@media(min-width: 768px) 
+{
+
+  body
+    {
+    background-image: url("../imagens/TI.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.93;
+  }
+
+  #meuFormulario 
+    {
+    margin-top: 10px;
+  }
+
+  #formAluno
+    {
+    height: 85%;
+  }
+
+  .btn
+    {
+    color: #fff;
+  }
+
+  div.text-center.row.col-sm-12
+    {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #botoesSocial
+    {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .btn:hover
+    {
+    color: #fff;
+  }
+
+  #botaoCadastrar:hover
+    {
+    background-color: #27518C;
+  }
+
+  #textoForm
+    {
+    margin: 10px 0 0 0;
+  }
+
+  #textoForm p
+    {
+    font-family: Helvetica;
+    font-size: 10pt;
+    color: #000;
+    width: 100%;
+    font-weight: bold;
+
+  }
+  
+  .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover
+  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+  }
+  
+  .kv-avatar .file-input
+  {
+    display: table-cell;
+    max-width: 220px;
+  }
+
+}
+

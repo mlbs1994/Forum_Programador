@@ -1,0 +1,27 @@
+@import "login.css";
+
+#content
+{
+    margin-top: 100px;
+    font-family: Montserrat, sans-serif;;
+    font-size: 25pt;
+    color: red;
+}
+
+#content a
+{
+    color: red;
+    font-weight: bold;
+}
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01/05/2017, 23:21:32
+    Author     : Matheus Levi
+*/
+

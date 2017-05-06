@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Formulário de Cadastro do aluno</title>
+                <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilos/cadastro.css">   
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="jq/jquery.inputmask.bundle.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+                <script src="js/cadastro.js"></script>
+	</head>
+	<body>
+		<div class="container text-center col-sm-12">
+			<div id="cadastroHeader" class="centralizar text-center">
+				<img src="imagens/logo.png" alt="logo">
+			</div>
+			<div id="meuFormulario" class="col-sm-12">
+				<div id="formTitle" class="col-sm-5 centralizar"><h3>Cadastro</h3></div>
+				<form class="text-left col-sm-5 centralizar" id="formAluno" action="CadastroServlet" method="POST">
+					<div class="form-group row col-sm-12 text-center" id="textoForm">
+						<p>Participe agora em uma das maiores comunidades de desenvolvimento de software da web</p>
+					</div>
+                                        <div class="form-group row col-sm-12">
+						<div class="formInput has-feedback kv-avatar center-block">
+							<label id="imgLabel" for="imgConta">Imagem da Conta: </label>
+                                                        <div id="imgAvatar">
+                                                            <img id="img" src="imagens/user.png" class="img-thumbnail" alt="Avatar" >
+                                                        <div>
+                                                        <div class="kv-avatar center-block" style="width:200px">
+                                                                <input id="avatar-1" name="imgConta" type="file" class="file-loading" onchange="srcImg()">
+                                                        </div>
+						</div>
+                                                        </div>
+                                                </div>
+					</div>
+					<div class="form-group row col-sm-12">
+						<div class="formInput has-feedback">
+							<label for="nome">Nome: </label>
+							<input class="form-control" type="text" name="nome" maxlength="70" placeholder="Digite seu nome" required>
+							<i class="glyphicon glyphicon-user form-control-feedback"></i>
+						</div>
+					</div>
+                                        <div class="form-group row col-sm-12">
+						<div class="formInput has-feedback">
+							<label for="login">Login: </label>
+							<input id="loginHTML" class="form-control" type="text" name="login" maxlength="70" placeholder="Digite seu login" required>
+							<i class="glyphicon glyphicon-user form-control-feedback"></i>
+						</div>
+					</div>
+					<div class="form-group row col-sm-12">		
+						<div class="formInput has-feedback">	
+							<label for="email">Email: </label>
+							<input class="form-control" type="email" name="email" size="40" maxlength="255" placeholder="Digite seu email" required>
+							<i class="glyphicon glyphicon-envelope form-control-feedback"></i>
+						</div>
+					</div>
+					<div class="form-group row col-sm-12">
+						<div class="formInput has-feedback col-sm-ofsset-2 col-sm-12">	
+							<label for="senha">Senha: </label>
+							<input id="senhaHTML" class="form-control" type="password" name="senha" maxlength="20">
+							<i class="glyphicon glyphicon-lock form-control-feedback"></i>
+						</div>
+					</div>
+					<div class="form-group row col-sm-12">
+						<div class="formInput has-feedback col-sm-ofsset-2 col-sm-12">	
+							<label for="senha">Confirmar Senha: </label>
+							<input id="confirmarSenhaHTML" class="form-control" type="password" name="senha" maxlength="20">
+							<i class="glyphicon glyphicon-lock form-control-feedback"></i>
+						</div>
+					</div>
+					<div class="form-group row col-sm-12">	
+						<div class="text-center botao">
+                                                    <button id="botaoCadastrar" type="button" class="btn btn-block" onclick="verificarSenha()">Cadastrar</button>
+						</div>
+					</div>
+					<div class="text-center  row col-sm-12">
+						<p><b>Ou</b></p>
+					</div>
+					<div class="text-center  row col-sm-12 col-xs-12" id="botoesSocial">
+						<div class="col-sm-6 col-xs-6">
+							<a class="btn btn-block btn-social btn-google">
+								<span class="fa fa-google"></span> Sign up with Google
+							</a>
+						</div>
+						<div class="col-sm-6  col-xs-6">
+							<a class="btn btn-block btn-social btn-facebook">
+							<span class="fa fa-facebook"></span> Sign up with Facebook
+						</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
