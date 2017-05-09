@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package persistence.pergunta;
+package persistence.linguagem_programacao;
 
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -11,21 +11,18 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import model.LinguagemProgramacao;
-import model.Pergunta;
-import model.Usuario;
 
 /**
  *
  * @author Matheus Levi
  */
-public class PerguntaDAOImpl implements PerguntaDAO
+public class LinguagemProgramacaoDAOImpl implements LinguagemProgramacaoDAO
 {
-
     EntityManagerFactory emf;
     EntityManager em;
     EntityTransaction et;
     
-    public PerguntaDAOImpl()
+    public LinguagemProgramacaoDAOImpl()
     {
          try
         {
@@ -42,94 +39,45 @@ public class PerguntaDAOImpl implements PerguntaDAO
             e.printStackTrace();
         }
     }
-    
-    @Override
-    public void cadastrarPergunta(Pergunta p)
-    {
-        this.em.persist(p);
-    }
 
     @Override
-    public Pergunta getPergunta(Long id)
-    {
+    public void cadastrarLinguagemProgramacao(LinguagemProgramacao p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void atualizarPergunta(Pergunta p)
-    {
+    public LinguagemProgramacao getLinguagemProgramacao(Long id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void removerPergunta(Pergunta p)
-    {
+    public void atualizarLinguagemProgramacao(LinguagemProgramacao p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Pergunta> getListaPerguntas()
-    {
+    public void removerLinguagemProgramacao(LinguagemProgramacao p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Pergunta> getListaPerguntasPorUsuario(Usuario usr)
+    public List<LinguagemProgramacao> getListaLinguagemProgramacao() 
     {
+        return this.em.createQuery("SELECT lp from LinguagemProgramacao lp", LinguagemProgramacao.class).getResultList();
+    }
+
+    @Override
+    public void commitTransacao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Pergunta> getListaPerguntasPorLinguagemProgramacao(LinguagemProgramacao lp)
-    {
+    public void finalizarTransacao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Pergunta> getPerguntasPorPalavraChave(String plvr)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<Pergunta> getPerguntasAvancado(List<String> campos, String plvr)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<Pergunta> getListaPerguntasRecentes()
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<Pergunta> getListaPerguntasAbertas()
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<Pergunta> getListaPerguntasResolvidas()
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void commitTransacao()
-    {
-        this.et.commit();
-    }
-
-    @Override
-    public void finalizarTransacao()
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void abortarTransacao()
-    {
+    public void abortarTransacao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

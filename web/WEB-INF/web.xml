@@ -24,6 +24,14 @@
         <servlet-name>ExcluirContaServlet</servlet-name>
         <servlet-class>control.ExcluirContaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubmeterPerguntaServlet</servlet-name>
+        <servlet-class>control.SubmeterPerguntaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LinguagemProgramacaoServlet</servlet-name>
+        <servlet-class>control.LinguagemProgramacaoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -50,6 +58,14 @@
     <servlet-mapping>
         <servlet-name>ExcluirContaServlet</servlet-name>
         <url-pattern>/ExcluirContaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubmeterPerguntaServlet</servlet-name>
+        <url-pattern>/SubmeterPerguntaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LinguagemProgramacaoServlet</servlet-name>
+        <url-pattern>/LinguagemProgramacaoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

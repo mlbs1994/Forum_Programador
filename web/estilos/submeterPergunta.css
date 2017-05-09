@@ -1,0 +1,226 @@
+.centralizar
+{
+margin: auto;
+float: none;
+}
+
+navbar
+{
+    background-color: #3F659A;
+}
+
+.icon-bar-estilo
+{
+    background-color: #fff !important;
+}
+
+button[class="navbar-toggle"]:hover, button[class="navbar-toggle"]:active
+{
+    background-color: #90ACD2 !important;
+}
+ 
+.footer, .push 
+{
+    clear: both;
+    color: #fff;
+}
+
+.footer
+{
+    background-color: #3F659A;
+} 
+
+* 
+{
+    margin: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+.wrapper
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.footer, .push
+{
+    height: 5em;
+}
+
+
+#logo
+{
+    position: absolute;
+    margin-top:5px;
+    height: 50%;
+    width: 400px;
+}
+
+#myFpBar
+{
+    padding-top: 15px;
+}
+
+body
+{
+    background-color: #ddf;
+}
+
+
+  
+.navbar
+{
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #3F659A;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;  
+}
+  
+ .navbar-nav li a
+ {
+    color: #fff !important;
+ }
+ 
+ .navbar-nav li.active a
+ {
+    color: #fff !important;
+    background-color: #000; !important;
+ }
+ 
+.navbar-default .navbar-toggle
+{
+    border-color: transparent;
+}
+
+.open .dropdown-toggle
+{
+    color: #fff;
+    background-color: #90ACD2 !important;
+}  
+  
+#menuBarDiv a
+{
+  background-color: #fff !important;  
+  color: #000 !important;
+}
+
+#menuBarDiv .dropdown-menu
+{
+  background-color: #fff !important;  
+  color: #000 !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a 
+{
+  background-image: none;
+}
+#menuBarDiv a:hover
+{
+  background-color: #eee !important;  
+  color: #000 !important;
+}
+
+#menuBarDiv a:active
+{
+  background-color: #eee !important;  
+  color: #000 !important;
+}
+
+
+.dropdown-menu
+{
+    background-color: #90ACD2;
+}
+  
+.dropdown-menu li a
+{
+    color: #fff !important;
+}
+
+.dropdown-menu li a:hover
+{
+    background-color: #27518C; !important;
+}
+
+#comment
+{
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 150px;
+}
+
+#formContainer
+{
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+
+#formSubmeterPergunta
+{
+    background-color: #fff;
+    width: 1000px;
+    height: 750px;
+    padding: 25px;
+}
+
+
+#formTitle
+{
+    background-color: #3F659A;
+    border-bottom: none;
+    color: white;
+    width: 1000px;
+}
+
+
+
+#formTitle h3
+{
+    margin: 0px;
+}
+
+
+
+
+#botaoCadastrar 
+{
+    background-color: #3F659A;
+    color: #FFFFFF;
+    border: none;
+
+}
+
+
+
+.btn-group open .btn-group open
+{
+    background-color: #fff;
+}
+
+
+#botaoCadastrar:hover
+{
+    background-color: #27518C;
+}
+
+.centralizar
+{
+    margin: auto;
+    float: none;
+}
+
+.Editor-editor
+{
+    height: 350px !important;
+}
+  
