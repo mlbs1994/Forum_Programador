@@ -10,6 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import model.LinguagemProgramacao;
 import model.Pergunta;
 import model.Usuario;
@@ -76,7 +77,11 @@ public class PerguntaDAOImpl implements PerguntaDAO
     @Override
     public List<Pergunta> getListaPerguntasPorUsuario(Usuario usr)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           Query q = this.em.createQuery("SELECT p FROM Pergunta p WHERE p.idUsuario = :idUsuario");
+           q.setParameter("idUsuario", usr);
+           q.setMaxResults(20);
+           
+           return q.getResultList();
     }
 
     @Override

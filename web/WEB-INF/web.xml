@@ -32,6 +32,10 @@
         <servlet-name>LinguagemProgramacaoServlet</servlet-name>
         <servlet-class>control.LinguagemProgramacaoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MinhasPerguntasServlet</servlet-name>
+        <servlet-class>control.MinhasPerguntasServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -66,6 +70,10 @@
     <servlet-mapping>
         <servlet-name>LinguagemProgramacaoServlet</servlet-name>
         <url-pattern>/LinguagemProgramacaoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MinhasPerguntasServlet</servlet-name>
+        <url-pattern>/MinhasPerguntasServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
