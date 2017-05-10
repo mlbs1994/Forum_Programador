@@ -1,14 +1,14 @@
-var xhr = new XMLHttpRequest();
+var xhrPerg = new XMLHttpRequest();
 var doc;
 
-function carregarMinhasPerguntas()
+function carregarPerguntasAbertas()
 {
-    xhr.onreadystatechange = getInfo;
+    xhrPerg.onreadystatechange = getInfoPerg;
     
     try
     {
-        xhr.open("GET","http://localhost:8080/Forum_Programador/MinhasPerguntasServlet",true);
-        xhr.send();
+        xhrPerg.open("GET","http://localhost:8080/Forum_Programador/PerguntasServlet",true);
+        xhrPerg.send();
     }
     catch(e)
     {
@@ -16,11 +16,11 @@ function carregarMinhasPerguntas()
     }
 }
 
-function getInfo()
+function getInfoPerg()
 {
-    if(xhr.readyState==4)
+    if(xhrPerg.readyState==4)
     {
-        doc = xhr.responseXML;
+        doc = xhrPerg.responseXML;
         
         var perguntas = doc.getElementsByTagName("pergunta");
         

@@ -52,7 +52,7 @@
 								<li><a href="submeterPergunta.jsp">Fazer Perguntas</a></li>
 								<li><a href="minhasPerguntas.jsp">Minhas Perguntas</a></li>
 								<li><a href="perguntasAbertas.jsp">Em aberto</a></li>
-								<li><a href="perguntasRespondidas.jsp">Respondidas</a></li>
+								<li><a href="perguntasResolvidas.jsp">Resolvidas</a></li>
 								<li><a href="perguntas.jsp">Todas</a></li>
                                                                 <li><a href="minhasRespostas.jsp">Minhas Respostas</a></li>
 							</ul>
@@ -114,7 +114,7 @@
 			<div id="questoesContainer" class="container-fluid col-sm-12">
 				<div id="ultimasQuestoes" class="col-sm-6">
 					<div id="ultimasQuestoesHeader" class="text-center">
-						Questões Recentes
+						Questões Abertas
 					</div>
 					<div id="listaQuestoesRecentes" class="list-group col-sm-12">
 						<a href="consultaPergunta.jsp"  class="list-group-item row text-left">
@@ -187,7 +187,7 @@
 				</div>
 				<div id="questoesRespondidas" class="col-sm-6">
 					<div id="questoesRespondidasHeader" class="text-center">
-						Questões Respondidas
+						Questões Resolvidas
 					</div>
 					<div id="listaQuestoesRespondidas" class="list-group col-sm-12">
 						<a href="#"  class="list-group-item row text-left">

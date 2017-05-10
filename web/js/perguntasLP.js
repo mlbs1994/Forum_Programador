@@ -1,14 +1,14 @@
-var xhr = new XMLHttpRequest();
+var xhrPergLP = new XMLHttpRequest();
 var doc;
 
-function carregarMinhasPerguntas()
+function carregarPerguntasLP(id)
 {
-    xhr.onreadystatechange = getInfo;
+    xhrPergLP.onreadystatechange = getInfoPergLP;
     
     try
     {
-        xhr.open("GET","http://localhost:8080/Forum_Programador/MinhasPerguntasServlet",true);
-        xhr.send();
+        xhrPergLP.open("GET","http://localhost:8080/Forum_Programador/PerguntasLPServlet?id="+id,true);
+        xhrPergLP.send();
     }
     catch(e)
     {
@@ -16,15 +16,20 @@ function carregarMinhasPerguntas()
     }
 }
 
-function getInfo()
+function getInfoPergLP()
 {
-    if(xhr.readyState==4)
+    if(xhrPergLP.readyState==4)
     {
-        doc = xhr.responseXML;
+
+        
+        doc = xhrPergLP.responseXML;
         
         var perguntas = doc.getElementsByTagName("pergunta");
         
         var i=0;
+        var lp = perguntas[0].getAttribute("idLinguagemProgramacao");
+
+        atualizarTitulo(lp);
         
         for(i=0;i<perguntas.length;i++)
         {
@@ -73,4 +78,9 @@ function getInfo()
   {
       var id = doc.getElementsByTagName("id")[id].childNodes[0].nodeValue
       window.location.href = "consultaPergunta.jsp?id="+id;
+  }
+  
+  function atualizarTitulo(lp)
+  {
+      document.getElementById("lpTitulo").innerHTML = "Perguntas - "+lp;
   }

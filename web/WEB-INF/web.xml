@@ -36,6 +36,22 @@
         <servlet-name>MinhasPerguntasServlet</servlet-name>
         <servlet-class>control.MinhasPerguntasServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PerguntasAbertasServlet</servlet-name>
+        <servlet-class>control.PerguntasAbertasServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PerguntasResolvidasServlet</servlet-name>
+        <servlet-class>control.PerguntasResolvidasServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PerguntasServlet</servlet-name>
+        <servlet-class>control.PerguntasServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PerguntasLPServlet</servlet-name>
+        <servlet-class>control.PerguntasLPServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -74,6 +90,22 @@
     <servlet-mapping>
         <servlet-name>MinhasPerguntasServlet</servlet-name>
         <url-pattern>/MinhasPerguntasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerguntasAbertasServlet</servlet-name>
+        <url-pattern>/PerguntasAbertasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerguntasResolvidasServlet</servlet-name>
+        <url-pattern>/PerguntasResolvidasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerguntasServlet</servlet-name>
+        <url-pattern>/PerguntasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerguntasLPServlet</servlet-name>
+        <url-pattern>/PerguntasLPServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

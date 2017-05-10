@@ -17,7 +17,7 @@ public interface LinguagemProgramacaoDAO
 {
     public void cadastrarLinguagemProgramacao(LinguagemProgramacao p); //CREATE
     
-    public LinguagemProgramacao getLinguagemProgramacao(Long id); //READ
+    public LinguagemProgramacao getLinguagemProgramacao(Integer id); //READ
     
     public void atualizarLinguagemProgramacao(LinguagemProgramacao p); //UPDATE
     

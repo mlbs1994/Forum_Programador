@@ -23,7 +23,7 @@
          <script src="js/loadNavbar.js"></script> 
          <script src="js/minhasPerguntas.js"></script>
 	</head>
-        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarPerguntas(); carregarLinguagemProgramacaoNav();">
+        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarMinhasPerguntas(); carregarLinguagemProgramacaoNav();">
 		<div class="wrapper">
                     <nav class="navbar navbar-default navbar-fixed-top">
                         <div class="container-fluid col-sm-12">
@@ -52,7 +52,7 @@
                                                 <li><a href="submeterPergunta.jsp">Fazer Perguntas</a></li>
 						<li><a href="minhasPerguntas.jsp">Minhas Perguntas</a></li>
 						<li><a href="perguntasAbertas.jsp">Em aberto</a></li>
-						<li><a href="perguntasRespondidas.jsp">Respondidas</a></li>
+						<li><a href="perguntasResolvidas.jsp">Resolvidas</a></li>
 						<li><a href="perguntas.jsp">Todas</a></li>
                                                 <li><a href="minhasRespostas.jsp">Minhas Respostas</a></li>                                            </ul>
                                         </li>

@@ -46,8 +46,8 @@ public class LinguagemProgramacaoDAOImpl implements LinguagemProgramacaoDAO
     }
 
     @Override
-    public LinguagemProgramacao getLinguagemProgramacao(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public LinguagemProgramacao getLinguagemProgramacao(Integer id) {
+            return this.em.find(LinguagemProgramacao.class, id);
     }
 
     @Override

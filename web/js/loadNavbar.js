@@ -30,7 +30,7 @@ function getInfoNav()
         {
            var li = document.createElement("li");
            var a = document.createElement("a");
-           a.setAttribute("href","perguntaLP.jsp?id="+lp[i].getElementsByTagName("id")[0].childNodes[0].nodeValue);
+           a.setAttribute("href","perguntasLP.jsp?id="+lp[i].getElementsByTagName("id")[0].childNodes[0].nodeValue);
            a.textContent = lp[i].getElementsByTagName("nome")[0].childNodes[0].nodeValue
            
            //adicionando estilo

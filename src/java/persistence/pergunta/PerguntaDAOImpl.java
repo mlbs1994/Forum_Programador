@@ -71,7 +71,9 @@ public class PerguntaDAOImpl implements PerguntaDAO
     @Override
     public List<Pergunta> getListaPerguntas()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Query q = this.em.createQuery("SELECT p FROM Pergunta p ORDER BY p.dataSubmissao DESC");
+        q.setMaxResults(20);
+        return q.getResultList();
     }
 
     @Override
@@ -87,7 +89,11 @@ public class PerguntaDAOImpl implements PerguntaDAO
     @Override
     public List<Pergunta> getListaPerguntasPorLinguagemProgramacao(LinguagemProgramacao lp)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           Query q = this.em.createQuery("SELECT p FROM Pergunta p WHERE p.idLinguagemProgramacao = :idLinguagemProgramacao");
+           q.setParameter("idLinguagemProgramacao", lp);
+           q.setMaxResults(20);
+           
+           return q.getResultList();
     }
 
     @Override
@@ -111,13 +117,21 @@ public class PerguntaDAOImpl implements PerguntaDAO
     @Override
     public List<Pergunta> getListaPerguntasAbertas()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Query q = this.em.createQuery("SELECT p FROM Pergunta p WHERE p.status = :status");
+        q.setParameter("status", "Aberta");
+        q.setMaxResults(20);
+           
+        return q.getResultList();
     }
 
     @Override
     public List<Pergunta> getListaPerguntasResolvidas()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Query q = this.em.createQuery("SELECT p FROM Pergunta p WHERE p.status = :status");
+        q.setParameter("status", "Resolvida");
+        q.setMaxResults(20);
+           
+        return q.getResultList();
     }
 
     @Override

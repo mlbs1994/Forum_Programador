@@ -1,0 +1,207 @@
+
+#filter-bar
+{
+    
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+
+.navbar
+{
+background-color: #3F659A;
+}
+
+.icon-bar-estilo
+{
+background-color: #fff !important;
+}
+ 
+.footer, .push {
+clear: both;
+background-color: #3F659A;
+color: #fff;
+}
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+height: 5em;
+z-index: 1;
+}
+
+
+#logo
+{
+position: absolute;
+margin-top:5px;
+height: 50%;
+width: 400px;
+}
+
+#myFpBar
+{
+padding-top: 15px;
+}
+
+
+body {
+background-color: #ddf;
+}
+  
+.navbar {
+ font-family: Montserrat, sans-serif;
+ margin-bottom: 0;
+ background-color: #3F659A;
+ border: 0;
+ font-size: 11px !important;
+ letter-spacing: 4px;
+  
+}
+  
+  .navbar-nav li a
+  {
+  color: #fff !important;
+  }
+  .navbar-nav li.active a {
+  color: #fff !important;
+  background-color: #000; !important;
+  }
+  .navbar-default .navbar-toggle {
+  border-color: transparent;
+  }
+  .open .dropdown-toggle {
+  color: #fff;
+  background-color: #90ACD2 !important;
+  }
+  
+  .dropdown-menu
+  {
+background-color: #90ACD2;
+  }
+  
+  .dropdown-menu li a {
+  color: #fff !important;
+  }
+  .dropdown-menu li a:hover {
+  background-color: #27518C; !important;
+  }
+  
+  div[class="footer text-center"] a
+  {
+color: #90ACD2;
+  }
+  
+  div[class="footer text-center"] a:hover
+  {
+color: #fff;
+  }
+  
+  #PerguntaContainer
+  {
+background-color: #fff;
+width: 96%;
+border-radius: 30px;
+margin-top:90px;
+position: relative;
+margin-left: 2%;
+margin-right: 2%;
+margin-bottom: 50px;
+padding-left: 0;
+padding-right: 0;
+
+  }
+  
+  .PerguntaHeader
+  {
+background-color: #3F659A;
+height: 80px; 
+border-radius: 30px; 
+width: 100%;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+padding-top: 15px;
+font-size: 25pt;
+color: #fff;
+font-family: Montserrat, sans-serif;
+
+
+  }
+  
+  .PerguntaContent
+  {
+padding-left: 0;
+padding-right: 0;
+background-color: #5F82B2;
+  }
+  
+  #content
+  {
+border-left: 1px solid #3F659A; 
+  }
+  
+  .comentarioHeader
+  {
+ padding-left: 5px;
+  }
+  
+  .comentarioContent
+  {
+padding-top: 5px;
+background-color: #fff;
+border-bottom: 20px solid #ddf;
+  }
+  
+  .ultimoComentario
+  {
+ border: none;
+  }
+  
+  @media(max-width: 768px)
+  {
+#logo
+{
+height: 30px;
+position: relative;
+bottom: 5px;
+
+}
+
+.push
+{
+margin-top: 50px;
+}
+
+  #PerguntaContainer
+  {
+background-color: #fff;
+height: 2000px;
+width: 96%;
+border-radius: 30px;
+margin-top:90px;
+position: relative;
+margin-left: 2%;
+margin-right: 2%;
+margin-bottom: 0px;
+padding-left: 0;
+padding-right: 0;
+
+  }
+
+  .questao
+  {
+      color:red;
+  }
+ 
+  }

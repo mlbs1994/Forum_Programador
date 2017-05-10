@@ -52,7 +52,7 @@
 					<li><a href="submeterPergunta.jsp">Fazer Perguntas</a></li>
 					<li><a href="minhasPerguntas.jsp">Minhas Perguntas</a></li>
 					<li><a href="perguntasAbertas.jsp">Em aberto</a></li>
-					<li><a href="perguntasRespondidas.jsp">Respondidas</a></li>
+					<li><a href="perguntasResolvidas.jsp">Resolvidas</a></li>
 					<li><a href="perguntas.jsp">Todas</a></li>
                                         <li><a href="minhasRespostas.jsp">Minhas Respostas</a></li>
                                     </ul>
