@@ -21,8 +21,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
         <script src="js/excluirConta.js"></script>
+        <script src="js/loadNavbar.js"></script> 
     </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarLinguagemProgramacaoNav()">
 	<div class="wrapper">
             <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid col-sm-12">
@@ -40,15 +41,7 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Linguagens de Programação
                                 <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Java</a></li>
-                                    <li><a href="#">C</a></li>
-                                    <li><a href="#">C++</a></li>
-                                    <li><a href="#">C#</a></li>
-                                    <li><a href="#">PHP</a></li>
-                                    <li><a href="#">Python</a></li>
-                                    <li><a href="#">Ruby on Rails</a></li>
-                                    <li><a href="#">VB</a></li>
+                                <ul class="dropdown-menu" id="menuLP">
                                 </ul>
                             </li>
                             <li><a href="#">Artigos</a></li>
@@ -56,13 +49,12 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Perguntas
                                     <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-					<li><a href="#">Fazer Perguntas</a></li>
-					<li><a href="#">Minhas Perguntas</a></li>
-					<li><a href="#">Em aberto</a></li>
-					<li><a href="#">Respondidas</a></li>
-					<li><a href="#">Mais acessadas</a></li>
-					<li><a href="#">Mais recentes</a></li>
-					<li><a href="#">Todas</a></li>
+					<li><a href="submeterPergunta.jsp">Fazer Perguntas</a></li>
+					<li><a href="minhasPerguntas.jsp">Minhas Perguntas</a></li>
+					<li><a href="perguntasAbertas.jsp">Em aberto</a></li>
+					<li><a href="perguntasRespondidas.jsp">Respondidas</a></li>
+					<li><a href="perguntas.jsp">Todas</a></li>
+                                        <li><a href="minhasRespostas.jsp">Minhas Respostas</a></li>
                                     </ul>
 				</li>
 				<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
