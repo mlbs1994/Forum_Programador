@@ -3,7 +3,6 @@
     Created on : 02/05/2017, 08:33:10
     Author     : Matheus Levi
 --%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@page import="model.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>

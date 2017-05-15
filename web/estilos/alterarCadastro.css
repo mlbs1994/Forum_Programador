@@ -156,7 +156,7 @@ body
  .navbar-nav li.active a
  {
     color: #fff !important;
-    background-color: #000; !important;
+    background-color: #000 !important;
  }
  
 .navbar-default .navbar-toggle
@@ -182,7 +182,7 @@ body
 
 .dropdown-menu li a:hover
 {
-    background-color: #27518C; !important;
+    background-color: #27518C !important;
 }
 
 .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover

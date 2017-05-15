@@ -30,7 +30,7 @@ public class PerguntaDAOImpl implements PerguntaDAO
     {
          try
         {
-            this.emf = Persistence.createEntityManagerFactory("Forum_ProgramadorPU2");
+            this.emf = Persistence.createEntityManagerFactory("Forum_ProgramadorPU3");
             this.em = emf.createEntityManager();
             this.et = em.getTransaction();
             this.et.begin();

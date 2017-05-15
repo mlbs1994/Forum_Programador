@@ -7,7 +7,7 @@ function carregarLinguagemProgramacaoNav()
     {
         xhrNav.onreadystatechange=getInfoNav;
         
-        xhrNav.open("GET","http://localhost:8080/Forum_Programador/LinguagemProgramacaoServlet",true);
+        xhrNav.open("GET","http://localhost:8084/Forum_Programador/LinguagemProgramacaoServlet",true);
         xhrNav.send();
         
     }

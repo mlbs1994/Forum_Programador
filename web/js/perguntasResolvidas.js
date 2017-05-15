@@ -7,7 +7,7 @@ function carregarPerguntasResolvidas()
     
     try
     {
-        xhrPergRes.open("GET","http://localhost:8080/Forum_Programador/PerguntasResolvidasServlet",true);
+        xhrPergRes.open("GET","http://localhost:8084/Forum_Programador/PerguntasResolvidasServlet",true);
         xhrPergRes.send();
     }
     catch(e)

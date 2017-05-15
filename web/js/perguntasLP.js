@@ -7,7 +7,7 @@ function carregarPerguntasLP(id)
     
     try
     {
-        xhrPergLP.open("GET","http://localhost:8080/Forum_Programador/PerguntasLPServlet?id="+id,true);
+        xhrPergLP.open("GET","http://localhost:8084/Forum_Programador/PerguntasLPServlet?id="+id,true);
         xhrPergLP.send();
     }
     catch(e)

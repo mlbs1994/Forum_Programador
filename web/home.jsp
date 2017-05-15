@@ -8,7 +8,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page session="true" %>
 <% Usuario usr = (Usuario) session.getAttribute("usuario"); %>
-<!DOCTYPE html>
 <html>
 	<head>
          <title>Página Inicial - Fórum do Programador</title>

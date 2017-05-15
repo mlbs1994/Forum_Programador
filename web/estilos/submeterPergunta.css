@@ -102,7 +102,7 @@ body
  .navbar-nav li.active a
  {
     color: #fff !important;
-    background-color: #000; !important;
+    background-color: #000 !important;
  }
  
 .navbar-default .navbar-toggle
@@ -157,7 +157,7 @@ body
 
 .dropdown-menu li a:hover
 {
-    background-color: #27518C; !important;
+    background-color: #27518C !important;
 }
 
 #comment
@@ -260,7 +260,7 @@ background-color: #ddf;
   }
   .navbar-nav li.active a {
   color: #fff !important;
-  background-color: #000; !important;
+  background-color: #000 !important;
   }
   .navbar-default .navbar-toggle {
   border-color: transparent;
@@ -279,7 +279,7 @@ background-color: #90ACD2;
   color: #fff !important;
   }
   .dropdown-menu li a:hover {
-  background-color: #27518C; !important;
+  background-color: #27518C !important;
   }
   
   div[class="footer text-center"] a
