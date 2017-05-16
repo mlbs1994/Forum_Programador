@@ -7,7 +7,7 @@ function carregarPerguntasAbertas()
     
     try
     {
-        xhrPergAbt.open("GET","http://localhost:8084/Forum_Programador/PerguntasAbertasServlet",true);
+        xhrPergAbt.open("GET","https://localhost:8443/Forum_Programador/PerguntasAbertasServlet",true);
         xhrPergAbt.send();
     }
     catch(e)

@@ -7,7 +7,7 @@ function carregarMinhasPerguntas()
     
     try
     {
-        xhr.open("GET","http://localhost:8084/Forum_Programador/MinhasPerguntasServlet",true);
+        xhr.open("GET","https://localhost:8443/Forum_Programador/MinhasPerguntasServlet",true);
         xhr.send();
     }
     catch(e)
