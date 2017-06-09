@@ -80,7 +80,7 @@
                 <div class="form-group row col-sm-12">
                     <div class="formInput has-feedback">
 			<label for="titulo">Titulo </label>
-			<input class="form-control" type="text" name="titulo" maxlength="70" placeholder="Digite o titulo" value="<%= usr.getNomeUsuario() %>" required>
+			<input class="form-control" type="text" name="titulo" maxlength="70" placeholder="Digite o titulo"  required>
                     </div>
 		</div>
                 <div class="form-group row col-sm-12">
@@ -96,11 +96,16 @@
 			<input id="comentario" name="comentario"  />
                     </div>
 		</div>
-		<div class="form-group row col-sm-12">	
+		<div class="form-group row col-sm-8">	
                     <div class="text-center botao">
-                        <button id="botaoCadastrar" type="button" class="btn btn-block" onclick="submeterPergunta()">Submeter</button>
+                        <button id="botaoCadastrar" type="button" class="btn btn-block" onclick="submeterPergunta()"><span class="glyphicon glyphicon-share-alt"> Submeter</span></button>
                     </div>
 		</div>
+                <div class="form-group row col-sm-2 col-sm-offset-2" style="padding-right: 0px;">	
+                    <div class="text-center botao">
+                        <button id="botaoCadastrar" type="button" class="btn btn-block" onclick="inserirCodigo()"><span class="glyphicon glyphicon-copy"> Inserir Código</span></button>
+                    </div>
+		</div>    
             </form>
 	</div>
 	</div>

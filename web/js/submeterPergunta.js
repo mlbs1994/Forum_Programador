@@ -1,4 +1,5 @@
 var xhr = new XMLHttpRequest();
+var xhrCLP;
 
 function submeterPergunta()
 {
@@ -44,5 +45,41 @@ function getInfo()
            document.getElementById("selectLP").appendChild(option);
         }
         
+    }
+}
+
+function inserirCodigo()
+{
+    xhrCLP = new XMLHttpRequest();
+    
+    var lp = document.getElementById("selectLP").value;
+    alert(lp);
+    var url = "codeRSLPServlet?id="+lp;
+    
+    xhrCLP.onreadystatechange=selecionarLP;
+    
+    try
+    {
+        xhrCLP.open("GET", url, true);
+        xhrCLP.send();
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+    
+}
+
+function selecionarLP()
+{
+    if(xhrCLP.readyState==4)
+    {
+        var doc = xhrCLP.responseXML;
+        var codigoLPNode = doc.getElementsByTagName("codigo");
+        var codigoLP = codigoLPNode[0].childNodes[0].nodeValue;
+        
+        $("#comentario").Editor("setText", $("#comentario").Editor("getText")+"<pre><code class='"+codigoLP+"'>Digite seu código aqui</code></pre>");
+        
+        xhrCLP = null;
     }
 }

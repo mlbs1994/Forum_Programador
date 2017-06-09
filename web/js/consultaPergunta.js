@@ -8,7 +8,7 @@ var editor;
 var btnSubmeter = "<div id='butaoSubmeter' class='aResponder col-sm-4' style='width: 120px; text-align:left; padding-left: 5px;'>\n\
 <a href='javascript:submeterResposta()'><span class='glyphicon glyphicon-share-alt'> Submeter</span></a></div>\n";
 var btnInserirCodigo="<div id='butaoCodigo' class='aResponder col-sm-4' style='width: 140px; text-align:left; padding-left: 5px;'>\n\
-<a href='javascript:inserirCodigoModal()'><span class='glyphicon glyphicon-copy'> Inserir Código</span></a></div>\n"
+<a href='javascript:inserirCodigo()'><span class='glyphicon glyphicon-copy'> Inserir Código</span></a></div>\n"
 var lpCode;
 
 
@@ -61,6 +61,8 @@ function getInfoPerg()
                         <div id='btnSub' class='col-sm-12'>\n\
                         </div>";
         
+        
+        realcarSintaxeLP();
          
     }
     
@@ -229,7 +231,7 @@ function realcarSintaxeLP()
           });
 }
 
-function inserirCodigoModal()
+function inserirCodigo()
 {
-    $("#respostaText").Editor("setText", "<pre><code class='"+lpCode+"'>Digite seu código aqui</code></pre>");
+    $("#respostaText").Editor("setText", $("#respostaText").Editor("getText")+"<pre><code class='"+lpCode+"'>Digite seu código aqui</code></pre>");
 }
