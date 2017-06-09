@@ -15,7 +15,7 @@ public interface PerguntaDAO
 {
     public void cadastrarPergunta(Pergunta p); //CREATE
     
-    public Pergunta getPergunta(Long id); //READ
+    public Pergunta getPergunta(Integer id); //READ
     
     public void atualizarPergunta(Pergunta p); //UPDATE
     

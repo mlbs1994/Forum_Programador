@@ -52,6 +52,7 @@ public class LinguagemProgramacaoServlet extends HttpServlet {
             out.println("<linguagem>");
             out.println("<id>"+listaLinguagemProg.get(i).getIdLinguagemProgramacao()+"</id>");
             out.println("<nome>"+listaLinguagemProg.get(i).getNome()+"</nome>");
+            out.println("<codigoRS>"+listaLinguagemProg.get(i).getCodeRealceSintaxe()+"</codigoRS>");
             out.println("</linguagem>");
         }
         

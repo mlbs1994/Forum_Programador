@@ -49,7 +49,7 @@ public class Pergunta implements Serializable {
     private Integer idPergunta;
     @Basic(optional = false)
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dataSubmissao;
     @Basic(optional = false)
     @NotNull

@@ -43,6 +43,11 @@ public class LinguagemProgramacao implements Serializable {
     @NotNull
     @Size(min = 1, max = 30)
     private String nome;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    private String codeRealceSintaxe;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLinguagemProgramacao")
     private List<Pergunta> perguntaList;
 
@@ -81,6 +86,14 @@ public class LinguagemProgramacao implements Serializable {
 
     public void setPerguntaList(List<Pergunta> perguntaList) {
         this.perguntaList = perguntaList;
+    }
+    
+    public String getCodeRealceSintaxe() {
+        return codeRealceSintaxe;
+    }
+
+    public void setCodeRealceSintaxe(String codeRealceSintaxe) {
+        this.codeRealceSintaxe = codeRealceSintaxe;
     }
 
     @Override

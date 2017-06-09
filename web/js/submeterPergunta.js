@@ -16,7 +16,7 @@ function carregarLinguagemProgramacao()
     {
         xhr.onreadystatechange=getInfo;
         
-        xhr.open("GET","https://localhost:8443/Forum_Programador/LinguagemProgramacaoServlet",true);
+        xhr.open("GET","LinguagemProgramacaoServlet",true);
         xhr.send();
         
     }

@@ -8,6 +8,7 @@ package control;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,9 +16,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Pergunta;
+import model.Resposta;
 import model.Usuario;
 import persistence.pergunta.PerguntaDAO;
 import persistence.pergunta.PerguntaDAOImpl;
+import persistence.resposta.RespostaDAO;
+import persistence.resposta.RespostaDAOImpl;
 
 /**
  *
@@ -26,6 +30,7 @@ import persistence.pergunta.PerguntaDAOImpl;
 public class PerguntasServlet extends HttpServlet {
 
     PerguntaDAO pDAO;
+    RespostaDAO rDAO;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -44,21 +49,28 @@ public class PerguntasServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         this.pDAO = new PerguntaDAOImpl();
+        this.rDAO = new RespostaDAOImpl();
         Usuario usr = (Usuario) s.getAttribute("usuario");
-        String DATE_FORMAT = "dd/MM/yyyy";
+        String DATE_FORMAT = "dd/MM/yyyy HH:mm:ss";
         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         
         List<Pergunta> listaMinhasPerguntas = this.pDAO.getListaPerguntas();
+      
         
         out.println("<perguntas_usuario>");
         
         for(int i=0;i<listaMinhasPerguntas.size();i++)
         {
+            List<Resposta> listaRespostas = new ArrayList<Resposta>();
+            listaRespostas = rDAO.getListaRespostasPorPergunta(listaMinhasPerguntas.get(i));
+            int quantRespostas = listaRespostas.size();
+            
             out.println("<pergunta>");
             out.println("<id>"+listaMinhasPerguntas.get(i).getIdPergunta()+"</id>");
             out.println("<titulo>"+listaMinhasPerguntas.get(i).getTitulo()+"</titulo>");
             out.println("<data>"+sdf.format(listaMinhasPerguntas.get(i).getDataSubmissao())+"</data>");
-            out.println("<respostas>"+listaMinhasPerguntas.get(i).getRespostaList().size()+"</respostas>");
+            //out.println("<respostas>"+listaMinhasPerguntas.get(i).getRespostaList().size()+"</respostas>");
+            out.println("<respostas>"+quantRespostas+"</respostas>");
             out.println("</pergunta>");
         }
         

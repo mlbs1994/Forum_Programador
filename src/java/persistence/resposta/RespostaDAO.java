@@ -30,4 +30,10 @@ public interface RespostaDAO
     
     public List<Resposta> getListaRespostasPorUsuario(Usuario usr);
     
+    public void commitTransacao();
+    
+    public void finalizarTransacao();
+    
+    public void abortarTransacao();
+    
 }

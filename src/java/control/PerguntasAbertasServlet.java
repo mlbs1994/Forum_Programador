@@ -46,7 +46,7 @@ public class PerguntasAbertasServlet extends HttpServlet {
         
         this.pDAO = new PerguntaDAOImpl();
         Usuario usr = (Usuario) s.getAttribute("usuario");
-        String DATE_FORMAT = "dd/MM/yyyy";
+        String DATE_FORMAT = "dd/MM/yyyy HH:mm:ss";
         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         
         List<Pergunta> listaMinhasPerguntas = this.pDAO.getListaPerguntasAbertas();

@@ -48,7 +48,7 @@ public class PerguntasLPServlet extends HttpServlet {
         
         Usuario usr = (Usuario) s.getAttribute("usuario");
         LinguagemProgramacao lp = this.lpDAO.getLinguagemProgramacao(id);
-        String DATE_FORMAT = "dd/MM/yyyy";
+        String DATE_FORMAT = "dd/MM/yyyy HH:mm:ss";
         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         
         List<Pergunta> listaMinhasPerguntas = this.pDAO.getListaPerguntasPorLinguagemProgramacao(lp);

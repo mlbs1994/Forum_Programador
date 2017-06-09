@@ -8,6 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page session="true" %>
 <% Usuario usr = (Usuario) session.getAttribute("usuario"); %>
+<% String id = request.getParameter("id"); %>
 <!DOCTYPE html>
 <html>
     	<head>
@@ -15,14 +16,20 @@
          <meta charset="utf-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 	 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-     <link rel="stylesheet" href="estilos/consulta.css"> 
+         <link rel="stylesheet" href="estilos/consulta.css"> 
+         <link rel="stylesheet" href="suyati-line-control-82a0f54/editor.css">
+         <link rel="stylesheet" href="styles/default.css">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+         <script src="suyati-line-control-82a0f54/editor.js"></script>  
          <script src="js/loadNavbar.js"></script> 
+         <script src="js/consultaPergunta.js"></script>
+         <script src="highlight.pack.js"></script>
 	</head>
-        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarLinguagemProgramacaoNav()">
+        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarPergunta('<%=id %>'); carregarLinguagemProgramacaoNav(); getRespostas();">
 		<div class="wrapper">
 			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid col-sm-12">
@@ -71,123 +78,24 @@
 			  </div>
 			</nav>
 			<div id="PerguntaContainer" class="container-fluid col-sm-12">
-				<div class="col-sm-12 text-center PerguntaHeader" >
-					Problema no CSS - 26/05/2016
+				<div id="PerguntaHead" class="col-sm-12 text-center PerguntaHeader" >
 				</div>
 				<div class="col-sm-12 PerguntaContent">
 					<div class="row col-sm-12">
-						<div class="col-sm-12 comentarioHeader">Por: <span class="glyphicon glyphicon-user"></span> Matheus Levi
-							<span class="glyphicon glyphicon-calendar"></span> 26/05/2016
-							<span class="glyphicon glyphicon-time"></span> 08:59
+                                            <div class="col-sm-12 comentarioHeader">Por: <span class="glyphicon glyphicon-user"></span><span id="nomeUsuario"></span>
+                                                <span class="glyphicon glyphicon-calendar"></span><span id="dataPergunta"></span>
+                                                <span class="glyphicon glyphicon-time"></span><span id="horaPergunta"></span>
 						</div>
 					</div>
-					<div class=" col-sm-12 comentarioContent">
-						<p>Bom dia Pessoal</p>
-						<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI
-						, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum 
-						sobreviveu n�o s� a cinco s�culos, como tamb�m ao salto para a editora��o eletr�nica, permanecendo essencialmente inalterado. 
-						Se popularizou na d�cada de 60, quando a Letraset lan�ou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando 
-						passou a ser integrado a softwares de editora��o eletr�nica como Aldus PageMaker.</p>
-						<p>Lorem Ipsum � simplesmente uma simula��o de texto da ind�stria tipogr�fica e de impressos, e vem sendo utilizado desde o s�culo XVI
-						, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum 
-						sobreviveu n�o s� a cinco s�culos, como tamb�m ao salto para a editora��o eletr�nica, permanecendo essencialmente inalterado. 
-						Se popularizou na d�cada de 60, quando a Letraset lan�ou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando 
-						passou a ser integrado a softwares de editora��o eletr�nica como Aldus PageMaker.</p>
-						<pre class="codeContent text-left">
-// b is an index array, n is size of b,
-// player is the array need to be delete elements,
-// size is the size of player
-
-void play_cards(int b[],int n,int player[],int *size){
-int i;
-for(i = 0; i < n; i++)
-delete_cards(b[i],player,size);
-}
-
-void delete_cards(int n,int player[],int *size){
-int i;
-for(i = n; i < *size; i++)
-	player[i] = player[i+1];   
-	*size -= 1;
-}
-
-int main(void){
-int player[10] = {1,2,3,3,4,4,5,5,6,7};
-int index[6] = {2,3,4,5,6,7};
-int size = 10;
-
-play_cards(index,6,player,&size);
-
-for(int i = 0; i < size; i++)
-printf("%d|",player[i]);
-puts("");
-
-return 0;
-
-}
-						</pre>
-					</div>
+					<div class=" col-sm-12 comentarioContent" id="conteudoPergunta">
+					</div>   
 				</div>
-				<div class="col-sm-12 PerguntaContent">
-					<div class="row col-sm-12">
-						<div class="col-sm-12 comentarioHeader">Por: <span class="glyphicon glyphicon-user"></span> Klebson
-							<span class="glyphicon glyphicon-calendar"></span> 27/05/2016
-							<span class="glyphicon glyphicon-time"></span> 09:51
-						</div>
-					</div>
-					<div class=" col-sm-12 comentarioContent">
-						<p>Olá Matheus</p>
-						<p>Tente isso:</p>
-						<pre class="codeContent text-left">
-// b is an index array, n is size of b,
-// player is the array need to be delete elements,
-// size is the size of player
-
-void play_cards(int b[],int n,int player[],int *size){
-int i;
-for(i = 0; i < n; i++)
-delete_cards(b[i],player,size);
-}
-
-void delete_cards(int n,int player[],int *size){
-int i;
-for(i = n; i < *size; i++)
-	player[i] = player[i+1];   
-	*size -= 1;
-}
-
-int main(void){
-int player[10] = {1,2,3,3,4,4,5,5,6,7};
-int index[6] = {2,3,4,5,6,7};
-int size = 10;
-
-play_cards(index,6,player,&size);
-
-for(int i = 0; i < size; i++)
-printf("%d|",player[i]);
-puts("");
-
-return 0;
-
-}
-						</pre>
-					</div>
-				</div>
-				<div class="col-sm-12 PerguntaContent">
-					<div class="row col-sm-12">
-						<div class="col-sm-12 comentarioHeader">Por: <span class="glyphicon glyphicon-user"></span> Matheus Levi
-							<span class="glyphicon glyphicon-calendar"></span> 27/05/2016
-							<span class="glyphicon glyphicon-time"></span> 10:15
-						</div>
-					</div>
-					<div class=" col-sm-12 comentarioContent ultimoComentario">
-						<p>Funcionou aqui, Muito Obrigado!</p>
-					</div>
-				</div>
-			</div> 
-			<div class="push"></div>
+                                <div class="col-sm-12 PerguntaContent" id="respostasContent">
+                                </div>
+			</div>                          
 		</div>
-		 <div class="footer text-center">
+		  <div class="footer text-center">
 			<p>Site desenvolvido usando<a href="https://v4-alpha.getbootstrap.com" data-toggle="tooltip" title="Bootstrap CSS"> Bootstrap</a></p> 
-        </div>
+        </div>                                        
+        </body>                                            
 </html>

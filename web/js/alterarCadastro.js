@@ -17,7 +17,7 @@ function verificarSenha(alterar)
 
 function excluirConta()
 {
-    window.location = "https://localhost:8443/Forum_Programador/excluirConta.jsp";
+    window.location = "excluirConta.jsp";
 }
 
 function srcImg()

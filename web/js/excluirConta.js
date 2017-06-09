@@ -21,6 +21,6 @@ function excluirConta()
     
     if(c==true)
     {
-        window.location = "https://localhost:8443/Forum_Programador/ExcluirContaServlet";
+        window.location = "ExcluirContaServlet";
     }  
 }

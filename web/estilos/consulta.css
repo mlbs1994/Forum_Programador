@@ -3,6 +3,30 @@
 background-color: #3F659A;
 }
 
+#conteudoPergunta
+{
+    padding-bottom: 20px;
+}
+
+.aResponder
+{
+    margin: 5px; 
+    height: 25px; 
+    width: 100px; 
+    text-align: center;
+    background-color: rgb(63, 101, 154);
+}
+
+.aResponder a
+{
+    color: rgb(255, 255, 255);
+}
+
+.aResponder:hover, .aResponder a:hover
+{
+    background-color: #27518C !important;
+}
+
 .icon-bar-estilo
 {
 background-color: #fff !important;
@@ -101,7 +125,6 @@ color: #fff;
   #PerguntaContainer
   {
 background-color: #fff;
-height: 1800px;
 width: 96%;
 border-radius: 30px;
 margin-top:90px;
@@ -112,6 +135,11 @@ margin-bottom: 50px;
 padding-left: 0;
 padding-right: 0;
 
+  }
+  
+  #respostasContent
+  {
+      display: none;
   }
   
   .PerguntaHeader

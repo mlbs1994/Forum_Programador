@@ -45,18 +45,16 @@ public class Resposta implements Serializable {
     private Integer idResposta;
     @Basic(optional = false)
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dataSubmissao;
     @Basic(optional = false)
-    @NotNull
     @Lob
     @Size(min = 1, max = 2147483647)
+    @NotNull
     private String descricao;
     @Basic(optional = false)
-    @NotNull
     private boolean melhorResposta;
     @Basic(optional = false)
-    @NotNull
     private int numLikes;
     @JoinColumn(name = "idPergunta", referencedColumnName = "idPergunta")
     @ManyToOne(optional = false)

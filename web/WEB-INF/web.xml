@@ -52,6 +52,22 @@
         <servlet-name>PerguntasLPServlet</servlet-name>
         <servlet-class>control.PerguntasLPServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PerguntaServlet</servlet-name>
+        <servlet-class>control.PerguntaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SubmeterRespostaServlet</servlet-name>
+        <servlet-class>control.SubmeterRespostaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RespostasPerguntasServlet</servlet-name>
+        <servlet-class>control.RespostasPerguntasServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>codeRSLPServlet</servlet-name>
+        <servlet-class>control.codeRSLPServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -107,12 +123,26 @@
         <servlet-name>PerguntasLPServlet</servlet-name>
         <url-pattern>/PerguntasLPServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerguntaServlet</servlet-name>
+        <url-pattern>/PerguntaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubmeterRespostaServlet</servlet-name>
+        <url-pattern>/SubmeterRespostaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RespostasPerguntasServlet</servlet-name>
+        <url-pattern>/RespostasPerguntasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>codeRSLPServlet</servlet-name>
+        <url-pattern>/codeRSLPServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>60</session-timeout>
     </session-config>
-    <security-constraint>
+    <!--<security-constraint>
         <web-resource-collection>
             <web-resource-name>Entire Site</web-resource-name>
             <url-pattern>/*</url-pattern>
@@ -123,15 +153,12 @@
         <user-data-constraint>
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
-    </security-constraint>    
+    </security-constraint>
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
             <form-login-page>/login2.html</form-login-page>
-            <form-error-page>/loginError2.html</form-error-page>            
+            <form-error-page>/loginError2.html</form-error-page>
         </form-login-config>
-    </login-config> 
-    <security-role>
-        <role-name>auth</role-name>
-    </security-role>
+    </login-config>-->
 </web-app>

@@ -51,9 +51,9 @@ public class PerguntaDAOImpl implements PerguntaDAO
     }
 
     @Override
-    public Pergunta getPergunta(Long id)
+    public Pergunta getPergunta(Integer id)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return em.find(Pergunta.class, id);
     }
 
     @Override
