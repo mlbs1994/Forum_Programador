@@ -47,6 +47,7 @@ public class PerguntaServlet extends HttpServlet {
             out.println("<id>"+p.getIdPergunta()+"</id>");
             out.println("<login>"+p.getIdUsuario().getLogin()+"</login>");
             out.println("<linguagem_programacao>"+p.getIdLinguagemProgramacao().getNome()+"</linguagem_programacao>");
+            out.println("<linguagem_programacaoCode>"+p.getIdLinguagemProgramacao().getCodeRealceSintaxe()+"</linguagem_programacaoCode>");
             out.println("<data>"+dataf.format(p.getDataSubmissao())+"</data>");
             out.println("<hora>"+hourf.format(p.getDataSubmissao())+"</hora>");
             out.println("<titulo>"+p.getTitulo()+"</titulo>");

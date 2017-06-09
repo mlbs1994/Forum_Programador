@@ -5,9 +5,12 @@ var idPergunta;
 var isEditorActive = 0;
 var isEditorInit  = 0;
 var editor;
-var btnSubmeter = "<div id='butaoSubmeter' class='aResponder'>\n\
+var btnSubmeter = "<div id='butaoSubmeter' class='aResponder col-sm-4' style='width: 120px; text-align:left; padding-left: 5px;'>\n\
 <a href='javascript:submeterResposta()'><span class='glyphicon glyphicon-share-alt'> Submeter</span></a></div>\n";
-var helpInsertCode = "Para inserir código, siga as instruções abaixo:<br>1)Insira o código no editor<br2)Acesse o código fonte do editor (botão Source </>)<br>3)Adicione as tags &lt;pre&gt;&lt;code class='linguagemSelecionada'&gt; de forma que o código esteja dentro destas tags<br>4)Se quiser texto posterior, crie uma tag div que tenha algum conteudo de texto<br>5)Clique em Submeter ";
+var btnInserirCodigo="<div id='butaoCodigo' class='aResponder col-sm-4' style='width: 140px; text-align:left; padding-left: 5px;'>\n\
+<a href='javascript:inserirCodigoModal()'><span class='glyphicon glyphicon-copy'> Inserir Código</span></a></div>\n"
+var lpCode;
+
 
 function carregarPergunta(id)
 {
@@ -38,6 +41,7 @@ function getInfoPerg()
         var data = pergunta[0].getElementsByTagName("data")[0].childNodes[0].nodeValue;
         var hora = pergunta[0].getElementsByTagName("hora")[0].childNodes[0].nodeValue;
         var lp = pergunta[0].getElementsByTagName("linguagem_programacao")[0].childNodes[0].nodeValue;
+        lpCode = pergunta[0].getElementsByTagName("linguagem_programacaoCode")[0].childNodes[0].nodeValue;
         
         idLP = lp;
         
@@ -54,7 +58,7 @@ function getInfoPerg()
                         <div id='respostaBox'>\n\
                             <div id='respostaText'></div>\n\
                         </div>\n\
-                        <div id='btnSub'>\n\
+                        <div id='btnSub' class='col-sm-12'>\n\
                         </div>";
         
          
@@ -77,11 +81,10 @@ function fazerResposta()
         if(isEditorInit==0)
         {
             editor = $("#respostaText").Editor();
-            $("#respostaText").Editor("setText", helpInsertCode);
             isEditorInit = 1;
         }
  
-        document.getElementById("btnSub").innerHTML = btnSubmeter;
+        document.getElementById("btnSub").innerHTML = btnSubmeter+btnInserirCodigo;
         isEditorActive = 1;
     }  
     else
@@ -224,4 +227,9 @@ function realcarSintaxeLP()
               hljs.highlightBlock(block);
             });
           });
+}
+
+function inserirCodigoModal()
+{
+    $("#respostaText").Editor("setText", "<pre><code class='"+lpCode+"'>Digite seu código aqui</code></pre>");
 }
