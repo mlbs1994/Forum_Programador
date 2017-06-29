@@ -59,6 +59,7 @@ public class PerguntasLPServlet extends HttpServlet {
         {
             out.println("<pergunta idLinguagemProgramacao='"+lp.getNome()+"'>");
             out.println("<id>"+listaMinhasPerguntas.get(i).getIdPergunta()+"</id>");
+            out.println("<linguagem_programacao>"+listaMinhasPerguntas.get(i).getIdLinguagemProgramacao().getNome()+"</linguagem_programacao>");
             out.println("<titulo>"+listaMinhasPerguntas.get(i).getTitulo()+"</titulo>");
             out.println("<data>"+sdf.format(listaMinhasPerguntas.get(i).getDataSubmissao())+"</data>");
             out.println("<respostas>"+listaMinhasPerguntas.get(i).getRespostaList().size()+"</respostas>");

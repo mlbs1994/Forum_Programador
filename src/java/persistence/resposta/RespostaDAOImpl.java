@@ -51,15 +51,15 @@ public class RespostaDAOImpl implements RespostaDAO
     }
 
     @Override
-    public Resposta getResposta(Long id)
+    public Resposta getResposta(Integer id)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         return this.em.find(Resposta.class, id);
     }
 
     @Override
     public void atualizarResposta(Resposta r)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.em.merge(r);
     }
 
     @Override
@@ -103,6 +103,13 @@ public class RespostaDAOImpl implements RespostaDAO
     @Override
     public void abortarTransacao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void marcarMelhorResposta(Resposta r)
+    {
+        r.setMelhorResposta(true);
+        this.commitTransacao();
     }
     
 }

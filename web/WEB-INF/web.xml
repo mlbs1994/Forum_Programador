@@ -68,6 +68,14 @@
         <servlet-name>codeRSLPServlet</servlet-name>
         <servlet-class>control.codeRSLPServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MarcarMelhorRespostaServlet</servlet-name>
+        <servlet-class>control.MarcarMelhorRespostaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarcarPerguntaResolvidaServlet</servlet-name>
+        <servlet-class>control.MarcarPerguntaResolvidaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
@@ -138,6 +146,14 @@
     <servlet-mapping>
         <servlet-name>codeRSLPServlet</servlet-name>
         <url-pattern>/codeRSLPServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarcarMelhorRespostaServlet</servlet-name>
+        <url-pattern>/MarcarMelhorRespostaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarcarPerguntaResolvidaServlet</servlet-name>
+        <url-pattern>/MarcarPerguntaResolvidaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>60</session-timeout>

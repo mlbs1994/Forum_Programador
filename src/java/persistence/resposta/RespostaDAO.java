@@ -18,11 +18,13 @@ public interface RespostaDAO
 {
     public void cadastrarResposta(Resposta r); //CREATE
     
-    public Resposta getResposta(Long id); //READ
+    public Resposta getResposta(Integer id); //READ
     
     public void atualizarResposta(Resposta r); //UPDATE
     
     public void deletarResposta(Resposta r); //DELETE
+    
+    public void marcarMelhorResposta(Resposta r);
     
     public List<Resposta> getListaRespostas();
     

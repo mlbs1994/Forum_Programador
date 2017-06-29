@@ -29,7 +29,7 @@
          <script src="js/consultaPergunta.js"></script>
          <script src="highlight.pack.js"></script>
 	</head>
-        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarPergunta('<%=id %>'); carregarLinguagemProgramacaoNav(); getRespostas();">
+        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarPergunta('<%=id %>','<%=usr.getIdUsuario() %>'); carregarLinguagemProgramacaoNav(); getRespostas();">
 		<div class="wrapper">
 			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid col-sm-12">

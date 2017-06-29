@@ -35,6 +35,7 @@ public class SubmeterRespostaServlet extends HttpServlet {
             throws ServletException, IOException {
         System.out.println("Iniciando");
         response.setContentType("text/xml;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
        
         try

@@ -51,7 +51,8 @@ function getInfoPergRes()
             //Definindo os valores
             divData.textContent = perguntas[i].getElementsByTagName("data")[0].childNodes[0].nodeValue+" ";
             divResposta.textContent = perguntas[i].getElementsByTagName("respostas")[0].childNodes[0].nodeValue+" ";
-            divTitulo.textContent = perguntas[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue+" ";
+            divTitulo.textContent = "["+perguntas[i].getElementsByTagName("linguagem_programacao")[0].childNodes[0].nodeValue+"] "
+                    +perguntas[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue+" ";
             
             divData.appendChild(spanData);
             divResposta.appendChild(spanResposta);

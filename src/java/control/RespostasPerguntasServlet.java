@@ -60,7 +60,9 @@ public class RespostasPerguntasServlet extends HttpServlet {
             out.println("<id>"+listaRespostas.get(i).getIdResposta()+"</id>");
             out.println("<usuario id='"+listaRespostas.get(i).getIdUsuario().getIdUsuario()+"'>"+
                     listaRespostas.get(i).getIdUsuario().getNomeUsuario()+"</usuario>");
-            out.println("<tituloPergunta>"+listaRespostas.get(i).getIdPergunta().getTitulo()+
+            out.println("<tituloPergunta idUsuario='"+listaRespostas.get(i).getIdPergunta().
+                    getIdUsuario().getIdUsuario()+"'>"+listaRespostas.get(i).getIdPergunta().
+                            getTitulo()+
                     "</tituloPergunta>");
             out.println("<data>"+dataf.format(listaRespostas.get(i).getDataSubmissao())+"</data>");
             out.println("<hora>"+hourf.format(listaRespostas.get(i).getDataSubmissao())+"</hora>");
