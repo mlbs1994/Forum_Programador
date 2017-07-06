@@ -53,7 +53,6 @@ function inserirCodigo()
     xhrCLP = new XMLHttpRequest();
     
     var lp = document.getElementById("selectLP").value;
-    alert(lp);
     var url = "codeRSLPServlet?id="+lp;
     
     xhrCLP.onreadystatechange=selecionarLP;

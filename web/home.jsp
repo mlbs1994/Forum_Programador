@@ -13,15 +13,17 @@
          <title>Página Inicial - Fórum do Programador</title>
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
          <link rel="stylesheet" href="estilos/index.css"> 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
          <script src="js/loadNavbar.js"></script> 
+         <script src="js/home.js"></script> 
 	</head>
-	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarLinguagemProgramacaoNav()">
+        <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="carregarLinguagemProgramacaoNav(); initGetPerguntasAbertas(); initGetPerguntasResolvidas(); ">
 		<div class="wrapper">
 			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid col-sm-12">
@@ -115,146 +117,14 @@
 					<div id="ultimasQuestoesHeader" class="text-center">
 						Questões Abertas
 					</div>
-					<div id="listaQuestoesRecentes" class="list-group col-sm-12">
-						<a href="consultaPergunta.jsp"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Matheus Levi</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 03/05/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 2</div>
-							<div class="col-sm-12 itemItemLista questao">Problema no CSS</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Sergio Alencar</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 02/05/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 4</div>
-							<div class="col-sm-12 itemItemLista questao">Persistência em JPA, Entity Manager não funciona</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Klebson Leonardo</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 02/05/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 3</div>
-							<div class="col-sm-12 itemItemLista questao">Servidor Web não funciona</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Eric França</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 01/05/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 3</div>
-							<div class="col-sm-12 itemItemLista questao">Problema no HTML</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Jessé Henrique</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 30/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 8</div>
-							<div class="col-sm-12 itemItemLista questao">NullPointer Exception - Java</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Pedro Igor</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 30/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 0</div>
-							<div class="col-sm-12 itemItemLista questao">Não consigo configurar o Hibernate</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Lucas Jorge</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 29/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 2</div>
-							<div class="col-sm-12 itemItemLista questao">Dev C/C++ - Compilador não funciona</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Igor Oliveira</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 28/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 4</div>
-							<div class="col-sm-12 itemItemLista questao">ArrayIndexOutOfBounds Exception</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Douglas Alburquerque</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 27/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 8</div>
-							<div class="col-sm-12 itemItemLista questao">Integrar Maven com o Projeto Netbeans</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Edmilson Santana</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 26/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 2</div>
-							<div class="col-sm-12 itemItemLista questao">Integrar Jenkins com o Projeto</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> German Janco</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 25/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 4</div>
-							<div class="col-sm-12 itemItemLista questao">Problema no JSF</div>
-						</a>
+					<div id="listaQuestoesAbertas" class="list-group col-sm-12">
 					</div>
 				</div>
 				<div id="questoesRespondidas" class="col-sm-6">
 					<div id="questoesRespondidasHeader" class="text-center">
 						Questões Resolvidas
 					</div>
-					<div id="listaQuestoesRespondidas" class="list-group col-sm-12">
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Matheus Levi</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 22/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 2</div>
-							<div class="col-sm-12 itemItemLista questao">Problema no Javascript</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Klebson Santana</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 20/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 10</div>
-							<div class="col-sm-12 itemItemLista questao">Configurar persistence.xml</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Sérgio Alencar</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 18/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 7</div>
-							<div class="col-sm-12 itemItemLista questao">Erro Plugin Maven</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Jess� Henrique</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 17/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 5</div>
-							<div class="col-sm-12 itemItemLista questao">Método JUnit não funciona</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Lucas Jorge</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 16/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 1</div>
-							<div class="col-sm-12 itemItemLista questao">Servidor Apache - Error 404</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Eric França</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 16/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 6</div>
-							<div class="col-sm-12 itemItemLista questao">Jenkins não funciona</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Douglas Alburquerque</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 15/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 11</div>
-							<div class="col-sm-12 itemItemLista questao">Layout não está responsivo</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Edmilson Santana</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 14/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 4</div>
-							<div class="col-sm-12 itemItemLista questao">Google Maps não funciona</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Pedro Igor</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 13/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 9</div>
-							<div class="col-sm-12 itemItemLista questao">PHP - sc_exec_sql não retorna resultset</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Johnison Alburquerque</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 12/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 5</div>
-							<div class="col-sm-12 itemItemLista questao">Array está nulo</div>
-						</a>
-						<a href="#"  class="list-group-item row text-left">
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-user"></span> Matheus Levi</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-calendar"></span> 11/04/2016</div>
-							<div class="col-sm-4 itemItemLista"><span class="glyphicon glyphicon-share-alt"></span> 4</div>
-							<div class="col-sm-12 itemItemLista questao">Problema no C++</div>
-						</a>
+					<div id="listaQuestoesResolvidas" class="list-group col-sm-12">
 					</div>
 				</div>
 			</div>

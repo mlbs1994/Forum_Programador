@@ -35,7 +35,6 @@ function carregarPergunta(id, usuarioPergunta)
 {
     idPergunta = id;
     autorPergunta = usuarioPergunta;
-    alert(autorPergunta);
     xhrP.onreadystatechange = getInfoPerg;
     
     try
@@ -126,7 +125,6 @@ function submeterResposta()
     try
     {
         xhrR.open("POST", url, true);
-        alert(url);
         xhrR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhrR.send(parametros); 
     }
@@ -141,10 +139,8 @@ function verificarResposta()
     if(xhrR.readyState==4)
     {
         var htmlTxt = xhrR.responseXML;
-        alert(htmlTxt);
         var resposta = htmlTxt.getElementsByTagName("resposta");
         
-        alert(resposta[0].childNodes[0].nodeValue);
         
         document.location.reload(true);
     }
@@ -175,7 +171,6 @@ function carregarRespostas()
         var doc = xhrRP.responseXML;
         var respostas = doc.getElementsByTagName("resposta");
         var usuarioPergunta = respostas[0].getElementsByTagName("tituloPergunta")[0].getAttribute("idUsuario");
-        alert("UsuarioPergunta = "+usuarioPergunta);
         var i=0;
         for(i=0;i<respostas.length;i++)
         {
@@ -340,7 +335,6 @@ function verificarMelhorResposta()
         
         if(mensagem=="OK")
         {
-            alert("Melhor resposta marcada! Pergunta resolvida!");
             window.location = "MarcarPerguntaResolvidaServlet?id="+idPergunta;
         }
         

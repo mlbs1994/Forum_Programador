@@ -113,12 +113,12 @@ background-color: #27518C;
 width: 100%;
 }
 
-#listaQuestoesRecentes.col-sm-12
+#listaQuestoesAbertas.col-sm-12
 {
 padding: 0;
 }
 
-#listaQuestoesRespondidas.col-sm-12
+#listaQuestoesResolvidas.col-sm-12
 {
 padding: 0;
 }
